@@ -35,6 +35,7 @@ export default class App {
     initialize({
       apiDoc: require("./api-doc.js"),
       app: expressApp,
+      // Cannot pass the api-routes path due to the webpack bundling
       paths: [
         { path: "/users", module: require('./api-routes/users') },
         { path: "/apiDocs", module: require('./api-routes/apiDocs') },
